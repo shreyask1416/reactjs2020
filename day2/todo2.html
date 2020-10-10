@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- using DOM API imperative way -->
+    <script type="module">
+        const topDiv = document.createElement('div');
+        document.body.appendChild(topDiv);
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Todo - buy a new course!';
+        topDiv.append(h1);
+        const p = document.createElement('p');
+        p.textContent = 'React JS fundamentals';
+        topDiv.append(p);
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = true;
+        checkbox.name = 'todo-done';
+        checkbox.id = 'todo-done';
+        topDiv.append(checkbox);
+        const label = document.createElement('label');
+        label.textContent = 'done';
+        label.htmlFor = 'todo-done';
+        topDiv.append(label);
+    </script>
+</body>
+
+</html>

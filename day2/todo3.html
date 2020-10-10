@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Using React -->
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <div id="root" />
+    <script type="module">
+        const h1 = React.createElement('h1', null, 'Todo - buy a new course!');
+        const h2 = React.createElement('h2', null, 'React JS fundamentals');
+        const checkboxProps = {
+            type: 'checkbox',
+            checked: 'true',
+            name: 'todo-done',
+            id: 'todo-done',
+        };
+        const checkbox = React.createElement('input', checkboxProps);
+
+        const labelProps = {
+            htmlFor: 'todo-done',
+        };
+        const label = React.createElement('label', labelProps, 'done');
+        const container = React.createElement('div', null, [h1, h2, checkbox, label]);
+        ReactDOM.render(container, document.getElementById('root'));
+    </script>
+</body>
+</html>
+
+</body>
+</html>
